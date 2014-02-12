@@ -43,7 +43,6 @@ byte deg[8] = {
 
 void setup() {
   // set up the LCD's number of rows and columns:
-  Serial.begin(9600);
   lcd.createChar(0, deg); 
   lcd.begin(20, 4);
   // Print a message to the LCD.
@@ -165,30 +164,6 @@ void loop() {
   {
     green = green - blue;
   }
-  Serial.print("red: ");
-  Serial.print(red);
-  Serial.print(" Green: " );
-  Serial.print(green);
-  Serial.print(" Blue: " );
-  Serial.print(blue);
-  Serial.print(" thappy: ");
-  Serial.print(thappy);
-  Serial.print(" hhappy: ");
-  Serial.print(hhappy);
-  Serial.print(" T: ");
-  Serial.print(t);
-  Serial.print(" H: ");
-  Serial.print(h);
-  Serial.print(" TH: ");
-  Serial.print(th);
-  Serial.print(" HH: ");
-  Serial.print(hh);
-  Serial.println();
-  Serial.print("thappy should be: ");
-  Serial.print(t - thappyupper);
-  Serial.print(" hhappy should be: ");
-  Serial.print(h - hhappyupper);
-  Serial.println(" ");
   setBacklight(red, green, blue);
   lcd.setCursor(4,2);
   lcd.print(t, 0);
