@@ -8,12 +8,12 @@
 #define GREENLITE 3
 #define BLUELITE 5
 
-//Define DHT Pin
-
-
 // initialize the library with the numbers of the interface pins
+//LuquidCrystal lcd(RS, EN, DB4, DB5, DB6, DB7);
 LiquidCrystal lcd(2, 6, 10, 9, 8, 7);
 #define DHTTYPE DHT22
+
+// Define DHTXX Pin
 #define DHT22PIN 13
 
 // you can change the overall brightness by range 0 -> 255
@@ -60,18 +60,6 @@ void setup() {
  
  
 void loop() {
-/*  for (int i = 0; i < 255; i++) {
-    setBacklight(i, 0, 255-i);
-    delay(5);
-  }
-  for (int i = 0; i < 255; i++) {
-    setBacklight(255-i, i, 0);
-    delay(5);
-  }
-  for (int i = 0; i < 255; i++) {
-    setBacklight(0, 255-i, i);
-    delay(5);
-  } */
   int th = 0;
   int hh = 0;
   red = 0;
